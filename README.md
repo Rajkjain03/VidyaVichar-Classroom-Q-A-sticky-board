@@ -14,3 +14,9 @@
 ### Step 4: Define the API Routes
 
     Create backend/src/routes/questionRoutes.js to define the API endpoints.
+
+## Step 5: Set up the Server and Database Connection
+
+    backend/src/config/db.js (database connection)
+    backend/server.js (Server logic)
+    .env file in the backend to store MongoDB connection string.
