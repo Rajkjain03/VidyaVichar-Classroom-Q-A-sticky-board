@@ -35,3 +35,8 @@
     backend/server.js (Server logic)
     .env file in the backend to store MongoDB connection string.
 
+### Step 6: Create the Question Card Component
+    frontend/src/components/QuestionCard.js to display each question as a sticky note
+
+### Step 7: Create the Filter Controls
+    frontend/src/components/FilterControls.js for the instructor's board controls
