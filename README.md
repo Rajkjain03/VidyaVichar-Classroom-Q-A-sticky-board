@@ -1,3 +1,17 @@
+# Frontend
+
+### Step 1. Initialize Project and Install Dependencies
+
+    npx create-react-app frontend
+    cd frontend
+    npm install axios(for API calls)
+
+### Step 2. Create Components
+    frontend/src/components/QuestionForm.js (for submitting new questions)
+
+
+# Backend
+
 ## Step 1: Building backend
 
     Initialization: npm init -y
@@ -20,3 +34,4 @@
     backend/src/config/db.js (database connection)
     backend/server.js (Server logic)
     .env file in the backend to store MongoDB connection string.
+
