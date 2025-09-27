@@ -10,3 +10,7 @@
 ### Step 3: Create the API Controller
 
     backend/src/controllers/questionController.js to handle all the application logic, such as creating questions and updating their status
+
+### Step 4: Define the API Routes
+
+    Create backend/src/routes/questionRoutes.js to define the API endpoints.
