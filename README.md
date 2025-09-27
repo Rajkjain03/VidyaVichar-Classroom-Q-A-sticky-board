@@ -6,3 +6,7 @@
 ## Step 2: Design the Database Schema
 
     backend/src/models/questionModel.js (question text, author, status, and timestamp will be stored)
+
+### Step 3: Create the API Controller
+
+    backend/src/controllers/questionController.js to handle all the application logic, such as creating questions and updating their status
