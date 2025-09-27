@@ -43,5 +43,5 @@
 ### Step 5: Assemble the Main Board
     frontend/src/App.js to bring all the components together.
 
-### Step 11: Add CSS for Sticky Notes
+### Step 6: Add CSS for Sticky Notes
     frontend/src/App.css with styles to make it look like a sticky board.
