@@ -1,15 +1,19 @@
 import express from "express";
 import {
-  getQuestions,
+  getQuestionsForClass,
   createQuestion,
   updateQuestionStatus,
-  clearQuestions,
+  clearQuestionsForClass,
 } from "../controllers/questionController.js";
+import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.route("/").get(getQuestions).post(createQuestion);
-router.route("/clear").delete(clearQuestions);
-router.route("/:id").patch(updateQuestionStatus);
+router
+  .route("/:classId")
+  .get(protect, getQuestionsForClass)
+  .post(protect, createQuestion);
+router.route("/:questionId/status").patch(protect, updateQuestionStatus);
+router.route("/:classId/clear").delete(protect, clearQuestionsForClass); // <-- Add new route
 
 export default router;

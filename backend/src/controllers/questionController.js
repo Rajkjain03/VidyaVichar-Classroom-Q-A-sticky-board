@@ -14,7 +14,6 @@ export const getQuestionsForClass = async (req, res) => {
         .json({ message: "Not authorized to view these questions" });
     }
 
-    // ADDED: Filter logic
     const filter = req.query.status ? { status: req.query.status } : {};
     const classroomFilter = { classroom: req.params.classId };
 
@@ -27,7 +26,7 @@ export const getQuestionsForClass = async (req, res) => {
   }
 };
 
-// NEW: Function to clear all questions for a specific class
+// Function to clear all questions for a specific class
 export const clearQuestionsForClass = async (req, res) => {
   try {
     const classroom = await Classroom.findById(req.params.classId);
@@ -46,10 +45,6 @@ export const clearQuestionsForClass = async (req, res) => {
     res.status(500).json({ message: "Server Error" });
   }
 };
-
-// --- (createQuestion and updateQuestionStatus functions remain unchanged) ---
-
-// in backend/src/controllers/questionController.js
 
 export const createQuestion = async (req, res) => {
   const { text } = req.body;
