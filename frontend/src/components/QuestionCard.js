@@ -1,27 +1,27 @@
-import React from "react";
+import React from 'react';
 
-function QuestionCard({ question, onStatusChange }) {
+const QuestionCard = ({ question, user, onStatusChange }) => {
   const cardColor = {
-    unanswered: "#fffac8", // Light yellow
-    answered: "#c8e6c9",   // Light green
-    important: "#ffcdd2",  // Light red
-  };
-
-  const handleStatusUpdate = (newStatus) => {
-    onStatusChange(question._id, newStatus);
+    unanswered: "#fffac8",
+    answered: "#c8e6c9",
+    important: "#ffcdd2",
   };
 
   return (
     <div className="question-card" style={{ backgroundColor: cardColor[question.status] }}>
       <p className="question-text">{question.text}</p>
-      <p className="question-author">- {question.author}</p>
-      <div className="instructor-controls">
-        <button onClick={() => handleStatusUpdate("answered")}>Answered</button>
-        <button onClick={() => handleStatusUpdate("important")}>Important</button>
-        <button onClick={() => handleStatusUpdate("unanswered")}>Un-Answer</button>
-      </div>
+      <p className="question-author">- {question.author.name}</p>
+
+      {/* TEACHER CONTROLS */}
+      {user.role === 'teacher' && (
+        <div className="instructor-controls">
+          <button onClick={() => onStatusChange(question._id, 'answered')}>Answered</button>
+          <button onClick={() => onStatusChange(question._id, 'important')}>Important</button>
+          <button onClick={() => onStatusChange(question._id, 'unanswered')}>Un-Answer</button>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default QuestionCard;
