@@ -2,14 +2,16 @@ import mongoose from "mongoose";
 
 const questionSchema = mongoose.Schema(
   {
-    text: {
-      type: String,
-      required: true,
-    },
+    text: { type: String, required: true },
     author: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
-      default: "Anonymous",
+      ref: "User",
+    },
+    classroom: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "Classroom",
     },
     status: {
       type: String,
@@ -18,9 +20,7 @@ const questionSchema = mongoose.Schema(
       default: "unanswered",
     },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
 const Question = mongoose.model("Question", questionSchema);
