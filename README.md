@@ -95,29 +95,30 @@ To run this project locally, you will need Node.js and MongoDB installed on your
 
     The React application will open automatically in your browser at http://localhost:3000.
 
-### Assumptions
+## Assumptions
 
 In building the VidyaVichar project, we made several key assumptions to define its scope and functionality.
 
-## Authentication and Roles
+### Authentication and Roles
 
 - Fixed Roles: We assumed users are strictly either a 'teacher' or a 'student'. This role is assigned at registration and does not change. There are no other roles, like administrators or teaching assistants.
 
-## Classroom and Question Management
+### Classroom and Question Management
 
 - Join Code is Sufficient: We assumed that a unique, 6-character, randomly generated code is a secure and sufficient method for students to join a class. There is no system for email invitations or manual enrollment by the teacher.
 
 - No Deletion of Core Data: The application does not include functionality to delete a user account or an entire classroom. The only deletion feature is the "Clear All Questions" function for teachers.
 
 - Non-deletable Classes: Once a class is created, it cannot be deleted. This was assumed because:
-- Students may still have doubts after the session ends and should be able to post questions later.
-- Teachers or teaching assistants may revisit past classes to review questions and prepare clarifications or study resources.
+
+  - Students may still have doubts after the session ends and should be able to post questions later.
+  - Teachers or teaching assistants may revisit past classes to review questions and prepare clarifications or study resources.
 
 - Open Enrollment: Any student with a valid join code can join the corresponding class. There is no approval system.
 
 - Student Identification: Every question posted by a student includes their name. The purpose of this design choice is simply to keep the class environment professional and focused, but not to point at individual students.
 
-## Technical and UI Scope
+### Technical and UI Scope
 
 - Local Development: We assumed the entire project is being developed and run in a local environment (localhost) and did not account for production deployment complexities like environment variable management for a live server or database.
 
@@ -135,6 +136,6 @@ In building the VidyaVichar project, we made several key assumptions to define i
 
 ### Subhash Dangeti (2025201007)
 
+### Git Repo link -
 
-### Git Repo link - 
     https://github.com/Rajkjain03/VidyaVichar-Classroom-Q-A-sticky-board
