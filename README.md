@@ -58,18 +58,23 @@ To run this project locally, you will need Node.js and MongoDB installed on your
 ### 1. Backend Server
 
 1.  Navigate to the backend directory:
-    bash
+
     cd backend
+
 2.  Install the necessary dependencies:
-    bash
+
     npm install
+
 3.  Create a .env file in the root of the backend folder. Add the following variables, replacing the placeholders with your own values:
-    ini
+
     PORT=5000
+
     MONGO_URI=your_mongodb_connection_string
+
     JWT_SECRET=your_super_secret_jwt_key
+
 4.  Start the backend server:
-    bash
+
     npm start
 
     The server should now be running on http://localhost:5000.
@@ -77,13 +82,15 @@ To run this project locally, you will need Node.js and MongoDB installed on your
 ### 2. Frontend Client
 
 1.  Navigate to the frontend directory in a new terminal:
-    bash
+
     cd frontend
+
 2.  Install the necessary dependencies:
-    bash
+
     npm install
+
 3.  Start the frontend development server:
-    bash
+
     npm start
 
     The React application will open automatically in your browser at http://localhost:3000.
@@ -94,21 +101,27 @@ In building the VidyaVichar project, we made several key assumptions to define i
 
 ## Authentication and Roles
 
-    Fixed Roles: We assumed users are strictly either a 'teacher' or a 'student'. This role is assigned at registration and does not change. There are no other roles, like administrators or teaching assistants.
+- Fixed Roles: We assumed users are strictly either a 'teacher' or a 'student'. This role is assigned at registration and does not change. There are no other roles, like administrators or teaching assistants.
 
 ## Classroom and Question Management
 
-    Join Code is Sufficient: We assumed that a unique, 6-character, randomly generated code is a secure and sufficient method for students to join a class. There is no system for email invitations or manual enrollment by the teacher.
+- Join Code is Sufficient: We assumed that a unique, 6-character, randomly generated code is a secure and sufficient method for students to join a class. There is no system for email invitations or manual enrollment by the teacher.
 
-    No Deletion of Core Data: The application does not include functionality to delete a user account or an entire classroom. The only deletion feature is the "Clear All Questions" function for teachers.
+- No Deletion of Core Data: The application does not include functionality to delete a user account or an entire classroom. The only deletion feature is the "Clear All Questions" function for teachers.
 
-    Open Enrollment: Any student with a valid join code can join the corresponding class. There is no approval system.
+- Non-deletable Classes: Once a class is created, it cannot be deleted. This was assumed because:
+- Students may still have doubts after the session ends and should be able to post questions later.
+- Teachers or teaching assistants may revisit past classes to review questions and prepare clarifications or study resources.
+
+- Open Enrollment: Any student with a valid join code can join the corresponding class. There is no approval system.
+
+- Student Identification: Every question posted by a student includes their name. The purpose of this design choice is simply to keep the class environment professional and focused, but not to point at individual students.
 
 ## Technical and UI Scope
 
-    Local Development: We assumed the entire project is being developed and run in a local environment (localhost) and did not account for production deployment complexities like environment variable management for a live server or database.
+- Local Development: We assumed the entire project is being developed and run in a local environment (localhost) and did not account for production deployment complexities like environment variable management for a live server or database.
 
-    Simple Data Types: The system is designed to handle text-based questions only. There is no functionality for file uploads, images, or rich text formatting.
+- Simple Data Types: The system is designed to handle text-based questions only. There is no functionality for file uploads, images, or rich text formatting.
 
 ## Contributors
 
@@ -116,8 +129,8 @@ In building the VidyaVichar project, we made several key assumptions to define i
 
 ### Shada Praneeth Reddy (2025204006)
 
-###
+### Qasim Naik (2025201064)
 
-###
+### Thirumalareddy sathvik reddy (2025201020)
 
-###
+### Subhash Dangeti (2025201007)

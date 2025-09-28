@@ -57,7 +57,7 @@ export const createQuestion = async (req, res) => {
   // DUPLICATE CHECK: Look for a question with the same text (case-insensitive) in the same class
   const existingQuestion = await Question.findOne({
     classroom: classId,
-    text: { $regex: `^${text.trim()}$`, $options: "i" }, // Case-insensitive exact match
+    text: { $regex: `^${text.trim()}$`, $options: "i" },
   });
 
   if (existingQuestion) {
