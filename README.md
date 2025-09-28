@@ -134,3 +134,7 @@ In building the VidyaVichar project, we made several key assumptions to define i
 ### Thirumalareddy sathvik reddy (2025201020)
 
 ### Subhash Dangeti (2025201007)
+
+
+### Git Repo link - 
+    https://github.com/Rajkjain03/VidyaVichar-Classroom-Q-A-sticky-board
